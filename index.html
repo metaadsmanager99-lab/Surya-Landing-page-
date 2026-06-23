@@ -3,8 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AdsBySurya | Elite Traffic Solutions</title>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700;900&display=swap" rel="stylesheet">
+    <title>AdsBySurya | Elite Traffic Agency</title>
+    
+    <!-- Premium Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Oswald:wght@500;700&display=swap" rel="stylesheet">
 
     <!-- Meta Pixel Code -->
     <script>
@@ -17,65 +19,223 @@
     s.parentNode.insertBefore(t,s)}(window, document,'script',
     'https://connect.facebook.net/en_US/fbevents.js');
     
+    // NAYA PIXEL ID
     fbq('init', '2039539010104451');
     fbq('track', 'PageView');
     </script>
     <noscript><img height="1" width="1" style="display:none"
     src="https://www.facebook.com/tr?id=2039539010104451&ev=PageView&noscript=1"
     /></noscript>
+    <!-- End Meta Pixel Code -->
     
     <style>
-        :root { --bg: #0a0a0c; --card: #141418; --gold: #d4af37; --text: #ffffff; }
-        body { background: var(--bg); color: var(--text); font-family: 'Outfit', sans-serif; display: flex; justify-content: center; padding: 20px; }
-        .main { max-width: 450px; width: 100%; text-align: center; }
+        :root {
+            --bg-dark: #0a0a0c;
+            --box-bg: #111115;
+            --primary-red: #e63946;
+            --accent-green: #00e676;
+            --text-light: #f8f9fa;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
         
-        .profile-img { width: 140px; height: 140px; border-radius: 50%; border: 3px solid var(--gold); box-shadow: 0 0 20px rgba(212, 175, 55, 0.3); margin-bottom: 20px; }
+        body { 
+            background-color: var(--bg-dark); 
+            color: var(--text-light); 
+            font-family: 'Montserrat', sans-serif;
+            display: flex; 
+            justify-content: center; 
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+            background-image: linear-gradient(rgba(230, 57, 70, 0.03) 1px, transparent 1px),
+                              linear-gradient(90deg, rgba(230, 57, 70, 0.03) 1px, transparent 1px);
+            background-size: 30px 30px;
+        }
+
+        .agency-container { 
+            max-width: 460px; 
+            width: 100%; 
+            background: var(--box-bg);
+            border: 1px solid rgba(230, 57, 70, 0.2);
+            padding: 40px 25px; 
+            border-radius: 16px;
+            text-align: center;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.8), inset 0 0 0 1px rgba(255,255,255,0.02);
+        }
+
+        /* Profile Avatar */
+        .profile-img { 
+            width: 130px; 
+            height: 130px; 
+            border-radius: 50%; 
+            object-fit: cover; 
+            margin-bottom: 20px; 
+            border: 3px solid var(--primary-red);
+            box-shadow: 0 0 25px rgba(230, 57, 70, 0.3);
+        }
+
+        /* Headline Section */
+        .status-badge {
+            background: rgba(230, 57, 70, 0.15);
+            color: var(--primary-red);
+            padding: 6px 14px;
+            border-radius: 4px;
+            font-size: 11px;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 15px;
+            display: inline-block;
+            border: 1px solid rgba(230, 57, 70, 0.3);
+        }
+
+        h1 { 
+            font-family: 'Oswald', sans-serif;
+            font-size: 34px; 
+            font-weight: 700; 
+            text-transform: uppercase; 
+            line-height: 1.1; 
+            margin-bottom: 15px; 
+        }
+        h1 span { color: var(--primary-red); }
         
-        h1 { font-size: 28px; margin-bottom: 10px; }
-        h1 span { color: var(--gold); }
-        .subtext { color: #a0a0a0; margin-bottom: 30px; font-size: 15px; }
+        .description { 
+            font-size: 15px; 
+            color: #adb5bd; 
+            margin-bottom: 25px; 
+            line-height: 1.5;
+            font-weight: 500;
+        }
+        .highlight-cpa { color: var(--accent-green); font-weight: 700; }
 
-        .btn { display: block; width: 100%; padding: 18px; border-radius: 12px; font-weight: 700; text-transform: uppercase; text-decoration: none; margin-bottom: 15px; transition: 0.3s; }
-        .btn-tg { background: #0088cc; color: #fff; }
-        .btn-dm { background: transparent; color: var(--gold); border: 2px solid var(--gold); }
-        .btn:hover { transform: translateY(-3px); opacity: 0.9; }
+        /* Niche Tags */
+        .niche-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 8px;
+            margin-bottom: 30px;
+        }
+        .niche-tag {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 6px 14px;
+            border-radius: 50px;
+            font-size: 12px;
+            font-weight: 700;
+            color: #e9ecef;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
 
-        .services { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 30px; }
-        .service-box { background: var(--card); padding: 15px; border-radius: 10px; font-size: 13px; border: 1px solid #222; }
+        /* Action Buttons */
+        .btn { 
+            display: flex; 
+            align-items: center; 
+            justify-content: center; 
+            width: 100%; 
+            padding: 18px; 
+            border-radius: 8px; 
+            font-family: 'Oswald', sans-serif;
+            font-size: 20px; 
+            font-weight: 700; 
+            text-transform: uppercase; 
+            letter-spacing: 1px;
+            text-decoration: none; 
+            transition: all 0.2s ease-in-out; 
+            margin-bottom: 15px;
+        }
+        
+        .btn-tg { 
+            background: #0088cc; 
+            color: #ffffff; 
+            border: none;
+            box-shadow: 0 6px 20px rgba(0, 136, 204, 0.3);
+        }
+        .btn-tg:hover { background: #0099e6; transform: translateY(-2px); }
 
-        .disclaimer { font-size: 10px; color: #555; text-align: justify; margin-top: 40px; line-height: 1.5; }
+        .btn-dm { 
+            background: transparent; 
+            color: var(--primary-red); 
+            border: 2px solid var(--primary-red);
+        }
+        .btn-dm:hover { background: rgba(230, 57, 70, 0.1); transform: translateY(-2px); }
+
+        /* Disclaimer */
+        .disclaimer { 
+            font-size: 11px; 
+            color: #495057; 
+            text-align: justify; 
+            padding-top: 25px; 
+            margin-top: 15px; 
+            border-top: 1px solid rgba(255,255,255,0.05); 
+            line-height: 1.6;
+        }
     </style>
 </head>
 <body>
 
-    <div class="main">
-        <img src="https://www.image2url.com/r2/default/images/1782240438700-e9663de8-b8d4-464d-82fd-66c70e62e830.png" alt="AdsBySurya" class="profile-img">
+    <div class="agency-container">
         
-        <h1>Expert <span>Traffic & Growth</span></h1>
-        <p class="subtext">Scale your community with high-intent audience acquisition. We handle Meta & Telegram growth for high-growth niches.</p>
+        <!-- Profile Image -->
+        <img src="https://www.image2url.com/r2/default/images/1782240438700-e9663de8-b8d4-464d-82fd-66c70e62e830.png" alt="AdsBySurya Traffic Agency" class="profile-img">
 
-        <!-- BUTTONS WITH TRACKING -->
-        <a href="https://t.me/+T4Sg_hq54cQ5NzBl" onclick="trackLead(event, 'Join_Telegram')" class="btn btn-tg">Join Telegram</a>
-        <a href="https://t.me/AdsBySurya" onclick="trackLead(event, 'DM_Direct')" class="btn btn-dm">DM Me Direct</a>
+        <div class="status-badge">Meta & Telegram Ads Experts</div>
 
-        <div class="services">
-            <div class="service-box">Meta Ads Growth</div>
-            <div class="service-box">Telegram Strategy</div>
+        <!-- Direct Aggressive Copy -->
+        <h1>We Run Ads For <br><span>Restricted Niches</span></h1>
+        
+        <p class="description">
+            Struggling with ad bans? We provide unstoppable Meta and Telegram advertising setups. Get high-quality leads at the <span class="highlight-cpa">Lowest Nominal CPA</span>.
+        </p>
+
+        <!-- Niche Highlights -->
+        <div class="niche-grid">
+            <div class="niche-tag">Binary Trading</div>
+            <div class="niche-tag">Forex</div>
+            <div class="niche-tag">Cricket & Sports</div>
+            <div class="niche-tag">High-Risk Niches</div>
         </div>
 
+        <!-- 🚀 Buttons with Individual Tracking -->
+        <a href="https://t.me/+T4Sg_hq54cQ5NzBl" onclick="trackAgencyLead(event, 'Join_Telegram_Channel')" class="btn btn-tg">
+            🚀 Join Telegram
+        </a>
+        
+        <a href="https://t.me/AdsBySurya" onclick="trackAgencyLead(event, 'DM_For_Ads_Setup')" class="btn btn-dm">
+            💬 DM Me Direct
+        </a>
+
+        <!-- Safety Disclaimer -->
         <div class="disclaimer">
-            <strong>Disclaimer:</strong> This site is not part of Meta™ Inc. Our services focus on lawful digital advertising and traffic generation. We do not provide financial advice. All services are strictly for educational and marketing outreach support.
+            <strong>Disclaimer:</strong> This site is not a part of the Facebook™ website or Facebook™ Inc. FACEBOOK™ is a trademark of FACEBOOK™, Inc. We are an independent traffic acquisition agency. Lead costs (CPA) depend on market conditions and ad spend. All setups strictly follow client-provided directives.
         </div>
     </div>
 
     <script>
-        function trackLead(event, action) {
-            event.preventDefault();
-            const url = event.currentTarget.href;
-            if (typeof fbq !== 'undefined') {
-                fbq('track', 'Lead', { content_name: action, content_category: 'Ad_Agency_Funnel' });
+        // --- EXACT ADVANCED TRACKING FOR DASHBOARD ---
+        function trackAgencyLead(event, actionName) {
+            event.preventDefault(); 
+            const targetUrl = event.currentTarget.href; 
+
+            try {
+                if (typeof fbq !== 'undefined') {
+                    // Meta Dashboard me "Action Name" ke sath dikhega ki kis button pe click hua
+                    fbq('track', 'Lead', {
+                        content_name: actionName,
+                        content_category: 'B2B_Ad_Services'
+                    });
+                    console.log(`✅ Lead Fired: ${actionName}`);
+                }
+            } catch (error) {
+                console.log("⚠️ Pixel Blocked:", error);
             }
-            setTimeout(() => { window.location.href = url; }, 400);
+            
+            // 400ms delay to ensure Meta receives the pixel ping
+            setTimeout(() => {
+                window.location.href = targetUrl;
+            }, 400);
         }
     </script>
 </body>
