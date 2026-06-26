@@ -3,11 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AdsBySurya | Premium Digital Growth Agency</title>
+    <title>AdsBySurya | Premium Traffic For Complex Niches</title>
     
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&display=swap" rel="stylesheet">
 
-    <!-- Frontend Pixel -->
     <script>
     !function(f,b,e,v,n,t,s)
     {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -72,14 +71,17 @@
             background: linear-gradient(90deg, var(--primary), var(--accent));
         }
 
+        /* YAHAN IMAGE KA FIX KIYA HAI */
         .profile-img { 
-            width: 100px; 
-            height: 100px; 
+            width: 110px; 
+            height: 110px; 
             border-radius: 50%; 
-            object-fit: cover; 
+            object-fit: contain; /* Fit logo perfectly */
+            background-color: #ffffff; /* White background taaki logo saaf dikhe */
             margin-bottom: 20px; 
-            border: 4px solid #ffffff;
-            box-shadow: 0 8px 20px rgba(79, 70, 229, 0.15);
+            border: 3px solid #e2e8f0; /* Clean light border */
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+            padding: 5px; /* Thoda space andar ki taraf */
         }
 
         .badge {
@@ -129,8 +131,8 @@
             padding: 6px 14px;
             border-radius: 8px;
             font-size: 12px;
-            font-weight: 600;
-            color: var(--text-gray);
+            font-weight: 700;
+            color: var(--text-dark);
         }
 
         .btn-group {
@@ -191,38 +193,37 @@
         
         <img src="https://www.image2url.com/r2/default/images/1782240438700-e9663de8-b8d4-464d-82fd-66c70e62e830.png" alt="AdsBySurya Traffic Agency" class="profile-img">
 
-        <div class="badge">Growth & Traffic Partners</div>
+        <div class="badge">🔥 Bulletproof Meta Ads Setup</div>
 
-        <h1>Scale High-Volume <br><span>Alternative Markets</span></h1>
+        <h1>Scale Your Telegram <br><span>Trading & Sports Channels</span></h1>
         
         <p class="description">
-            We provide robust Meta and Telegram advertising infrastructure. Acquire high-intent users at the industry's most efficient CPA.
+            We provide robust Meta Ads infrastructure for Forex, Binary, and Sports Predictions. Get active, high-intent members without account bans.
         </p>
 
         <div class="tag-grid">
-            <div class="tag">Financial Leads</div>
-            <div class="tag">Global Trading</div>
+            <div class="tag">Forex & Binary</div>
             <div class="tag">Sports Analysis</div>
+            <div class="tag">Crypto Leads</div>
         </div>
 
         <div class="btn-group">
-            <!-- CAPI Trigger added here -->
             <a href="https://t.me/+T4Sg_hq54cQ5NzBl" onclick="trackLead(event, 'Join_Telegram_Channel')" class="btn btn-primary">
-                ✈️ Join Telegram Updates
+                ✈️ See Live Results on Telegram
             </a>
             
             <a href="https://t.me/AdsBySurya" onclick="trackLead(event, 'DM_For_Ads_Setup')" class="btn btn-secondary">
-                💬 DM Me Direct
+                💬 DM "ADS" to Start Campaign
             </a>
         </div>
 
         <div class="disclaimer">
-            <strong>Disclaimer:</strong> This site is not a part of the Facebook™ website or Facebook™ Inc. FACEBOOK™ is a trademark of FACEBOOK™, Inc. We act solely as an independent digital marketing agency.
+            <strong>Disclaimer:</strong> This site is not a part of the Facebook™ website or Facebook™ Inc. We act solely as an independent digital marketing agency.
         </div>
     </div>
 
     <script>
-        // Frontend tracking & CAPI Server Trigger
+        // Frontend tracking & CAPI Server Trigger (WORKING PERFECTLY)
         function trackLead(event, actionName) {
             event.preventDefault(); 
             const targetUrl = event.currentTarget.href; 
@@ -232,7 +233,7 @@
                 fbq('track', 'Lead');
             }
 
-            // 2. Fire Server-Side CAPI (Render link injected here)
+            // 2. Fire Server-Side CAPI
             fetch('https://capi-for-surya.onrender.com/track', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
@@ -241,7 +242,7 @@
                     event_time: Math.floor(Date.now() / 1000),
                     action_source: 'website',
                     user_data: {
-                        client_ip_address: "", // Will be captured by server
+                        client_ip_address: "", 
                         client_user_agent: navigator.userAgent
                     }
                 })
