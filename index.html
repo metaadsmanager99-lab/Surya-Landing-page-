@@ -3,10 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AdsBySurya | Premium Traffic For Complex Niches</title>
+    <title>AdsBySurya | Elite Traffic</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap" rel="stylesheet">
     
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&display=swap" rel="stylesheet">
-
     <script>
     !function(f,b,e,v,n,t,s)
     {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -16,242 +15,86 @@
     t.src=v;s=b.getElementsByTagName(e)[0];
     s.parentNode.insertBefore(t,s)}(window, document,'script',
     'https://connect.facebook.net/en_US/fbevents.js');
-    
     fbq('init', '4448628662120776');
     fbq('track', 'PageView');
     </script>
-    <noscript><img height="1" width="1" style="display:none"
-    src="https://www.facebook.com/tr?id=4448628662120776&ev=PageView&noscript=1"
-    /></noscript>
     
     <style>
-        :root {
-            --bg-body: #f8fafc;
-            --bg-card: #ffffff;
-            --primary: #4f46e5;
-            --primary-hover: #4338ca;
-            --accent: #0ea5e9;
-            --text-dark: #0f172a;
-            --text-gray: #64748b;
-        }
-
         * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Plus Jakarta Sans', sans-serif; background: #f8fafc; min-height: 100vh; display: flex; align-items: center; justify-content: center; padding: 20px; }
         
-        body { 
-            background-color: var(--bg-body); 
-            color: var(--text-dark); 
-            font-family: 'Plus Jakarta Sans', sans-serif;
-            display: flex; 
-            justify-content: center; 
-            align-items: center;
-            min-height: 100vh;
-            padding: 20px;
-            background-image: radial-gradient(var(--text-gray) 0.5px, transparent 0.5px);
-            background-size: 20px 20px;
+        .card { 
+            background: #ffffff; width: 100%; max-width: 400px; padding: 30px; border-radius: 24px; 
+            text-align: center; box-shadow: 0 10px 25px rgba(0,0,0,0.05);
         }
 
-        .agency-card { 
-            max-width: 440px; 
-            width: 100%; 
-            background: var(--bg-card);
-            padding: 40px 30px; 
-            border-radius: 20px;
-            text-align: center;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.06), 0 1px 3px rgba(0,0,0,0.05);
-            border: 1px solid rgba(0,0,0,0.02);
-            position: relative;
-            overflow: hidden;
+        /* Fixed Alignment for Image */
+        .img-container { 
+            width: 100px; height: 100px; margin: 0 auto 15px auto; 
+            border-radius: 50%; border: 3px solid #e2e8f0; overflow: hidden;
+            display: flex; align-items: center; justify-content: center; background: #fff;
+        }
+        .img-container img { width: 100%; height: 100%; object-fit: cover; }
+
+        /* Fixed Alignment for Badge */
+        .badge { 
+            display: inline-block; background: #fee2e2; color: #b91c1c; padding: 5px 12px; 
+            border-radius: 20px; font-size: 11px; font-weight: 800; margin-bottom: 15px; 
         }
 
-        .agency-card::before {
-            content: '';
-            position: absolute;
-            top: 0; left: 0; right: 0;
-            height: 6px;
-            background: linear-gradient(90deg, var(--primary), var(--accent));
-        }
-
-        /* YAHAN IMAGE KA FIX KIYA HAI */
-        .profile-img { 
-            width: 110px; 
-            height: 110px; 
-            border-radius: 50%; 
-            object-fit: contain; /* Fit logo perfectly */
-            background-color: #ffffff; /* White background taaki logo saaf dikhe */
-            margin-bottom: 20px; 
-            border: 3px solid #e2e8f0; /* Clean light border */
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
-            padding: 5px; /* Thoda space andar ki taraf */
-        }
-
-        .badge {
-            background: #eff6ff;
-            color: var(--primary);
-            padding: 6px 14px;
-            border-radius: 20px;
-            font-size: 12px;
-            font-weight: 700;
-            margin-bottom: 15px;
-            display: inline-block;
-            border: 1px solid #bfdbfe;
-        }
-
-        h1 { 
-            font-size: 26px; 
-            font-weight: 800; 
-            line-height: 1.3; 
-            margin-bottom: 12px; 
-            color: var(--text-dark);
-        }
+        h1 { font-size: 22px; color: #1e293b; margin-bottom: 10px; line-height: 1.2; }
+        h1 span { color: #4f46e5; }
+        .desc { font-size: 14px; color: #64748b; margin-bottom: 20px; line-height: 1.5; }
         
-        h1 span { 
-            background: linear-gradient(90deg, var(--primary), var(--accent));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-        
-        .description { 
-            font-size: 15px; 
-            color: var(--text-gray); 
-            margin-bottom: 25px; 
-            line-height: 1.6;
-            font-weight: 500;
-        }
+        .tags { display: flex; justify-content: center; gap: 8px; margin-bottom: 20px; }
+        .tag { font-size: 11px; font-weight: 700; color: #475569; background: #f1f5f9; padding: 5px 10px; border-radius: 6px; }
 
-        .tag-grid {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 8px;
-            margin-bottom: 25px;
-        }
-        .tag {
-            background: #f8fafc;
-            border: 1px solid #e2e8f0;
-            padding: 6px 14px;
-            border-radius: 8px;
-            font-size: 12px;
-            font-weight: 700;
-            color: var(--text-dark);
-        }
-
-        .btn-group {
-            display: flex;
-            flex-direction: column;
-            gap: 12px;
-        }
-
-        .btn { 
-            display: flex; 
-            align-items: center; 
-            justify-content: center; 
-            width: 100%; 
-            padding: 16px; 
-            border-radius: 12px; 
-            font-size: 16px; 
-            font-weight: 700; 
-            text-decoration: none; 
-            transition: all 0.2s ease; 
-        }
-        
-        .btn-primary { 
-            background: var(--primary); 
-            color: #ffffff; 
-            box-shadow: 0 6px 15px rgba(79, 70, 229, 0.25);
-        }
-        
-        .btn-primary:hover { 
-            background: var(--primary-hover); 
-            transform: translateY(-2px); 
-        }
-
-        .btn-secondary { 
-            background: #f1f5f9; 
-            color: var(--primary); 
-            border: 1px solid #e2e8f0;
-        }
-        
-        .btn-secondary:hover { 
-            background: #e2e8f0; 
-            transform: translateY(-2px); 
-        }
-
-        .disclaimer { 
-            font-size: 11px; 
-            color: #94a3b8; 
-            text-align: justify; 
-            padding-top: 20px; 
-            margin-top: 25px; 
-            border-top: 1px solid #f1f5f9; 
-            line-height: 1.6;
-        }
+        .btn { display: block; width: 100%; padding: 15px; margin-bottom: 10px; border-radius: 12px; font-weight: 700; text-decoration: none; transition: 0.2s; }
+        .btn-1 { background: #4f46e5; color: white; }
+        .btn-2 { background: #f1f5f9; color: #1e293b; }
     </style>
 </head>
 <body>
 
-    <div class="agency-card">
-        
-        <img src="https://www.image2url.com/r2/default/images/1782240438700-e9663de8-b8d4-464d-82fd-66c70e62e830.png" alt="AdsBySurya Traffic Agency" class="profile-img">
+<div class="card">
+    <div class="img-container">
+        <img src="https://www.image2url.com/r2/default/images/1782240438700-e9663de8-b8d4-464d-82fd-66c70e62e830.png" alt="Logo">
+    </div>
+    
+    <div class="badge">🔥 BULLETPROOF META ADS SETUP</div>
+    <h1>Scale Your Telegram <br><span>Trading & Sports Channels</span></h1>
+    <p class="desc">Robust infrastructure for Forex, Binary, and Predictions. Get high-intent members without bans.</p>
 
-        <div class="badge">🔥 Bulletproof Meta Ads Setup</div>
-
-        <h1>Scale Your Telegram <br><span>Trading & Sports Channels</span></h1>
-        
-        <p class="description">
-            We provide robust Meta Ads infrastructure for Forex, Binary, and Sports Predictions. Get active, high-intent members without account bans.
-        </p>
-
-        <div class="tag-grid">
-            <div class="tag">Forex & Binary</div>
-            <div class="tag">Sports Analysis</div>
-            <div class="tag">Crypto Leads</div>
-        </div>
-
-        <div class="btn-group">
-            <a href="https://t.me/+T4Sg_hq54cQ5NzBl" onclick="trackLead(event, 'Join_Telegram_Channel')" class="btn btn-primary">
-                ✈️ See Live Results on Telegram
-            </a>
-            
-            <a href="https://t.me/AdsBySurya" onclick="trackLead(event, 'DM_For_Ads_Setup')" class="btn btn-secondary">
-                💬 DM "ADS" to Start Campaign
-            </a>
-        </div>
-
-        <div class="disclaimer">
-            <strong>Disclaimer:</strong> This site is not a part of the Facebook™ website or Facebook™ Inc. We act solely as an independent digital marketing agency.
-        </div>
+    <div class="tags">
+        <span class="tag">Forex & Binary</span>
+        <span class="tag">Sports Analysis</span>
+        <span class="tag">Crypto Leads</span>
     </div>
 
-    <script>
-        // Frontend tracking & CAPI Server Trigger (WORKING PERFECTLY)
-        function trackLead(event, actionName) {
-            event.preventDefault(); 
-            const targetUrl = event.currentTarget.href; 
-            
-            // 1. Fire Frontend Pixel
-            if (typeof fbq !== 'undefined') {
-                fbq('track', 'Lead');
-            }
+    <a href="https://t.me/+T4Sg_hq54cQ5NzBl" onclick="trackLead(event)" class="btn btn-1">✈️ See Live Results on Telegram</a>
+    <a href="https://t.me/AdsBySurya" onclick="trackLead(event)" class="btn btn-2">💬 DM "ADS" to Start Campaign</a>
+</div>
 
-            // 2. Fire Server-Side CAPI
-            fetch('https://capi-for-surya.onrender.com/track', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({
-                    event_name: 'Lead',
-                    event_time: Math.floor(Date.now() / 1000),
-                    action_source: 'website',
-                    user_data: {
-                        client_ip_address: "", 
-                        client_user_agent: navigator.userAgent
-                    }
-                })
-            }).catch(e => console.log("CAPI error:", e));
-            
-            setTimeout(() => {
-                window.location.href = targetUrl;
-            }, 400);
-        }
-    </script>
+<script>
+function trackLead(e) {
+    e.preventDefault();
+    const url = e.currentTarget.href;
+    if(typeof fbq !== 'undefined') fbq('track', 'Lead');
+    
+    fetch('https://capi-for-surya.onrender.com/track', {
+        method: 'POST',
+        headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify({
+            event_name: 'Lead',
+            event_time: Math.floor(Date.now() / 1000),
+            action_source: 'website',
+            user_data: { client_ip_address: "", client_user_agent: navigator.userAgent }
+        })
+    }).catch(err => console.log(err));
+    
+    setTimeout(() => { window.location.href = url; }, 300);
+}
+</script>
+
 </body>
 </html>
